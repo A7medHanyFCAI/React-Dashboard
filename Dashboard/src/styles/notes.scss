@@ -1,0 +1,109 @@
+
+@import "./variables";
+
+.note-card {
+  background: $card-bg;
+  border-radius: $radius;
+  padding: 16px;
+  box-shadow: $shadow;
+  width: 100%;
+
+  h3 {
+    margin: 0 0 8px 0;
+    color: $primary;
+    font-size: 18px;
+  }
+
+  .note-input {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    input {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ee;
+    }
+
+    select {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ee;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: none;
+      background: $primary;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .note-error {
+    color: $error;
+    margin-bottom: 8px;
+  }
+
+  .note-columns {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .note-column {
+    flex: 1;
+    background: #fafafb;
+    border-radius: 8px;
+    padding: 8px;
+
+    h4 {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+
+    .empty {
+      color: $muted;
+      font-size: 13px;
+    }
+
+    .note-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      background: white;
+      padding: 8px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      border: 1px solid #eef2f6;
+
+      .note-text {
+        flex: 1;
+        font-size: 14px;
+      }
+
+      .note-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        select {
+          padding: 6px;
+          border-radius: 6px;
+        }
+
+        .small {
+          background: transparent;
+          border: 1px solid #e6e9ee;
+          padding: 6px 8px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

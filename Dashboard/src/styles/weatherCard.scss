@@ -1,0 +1,106 @@
+@import "./variables";
+
+.weather-card {
+  background: $card-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 16px;
+  width: 100%;
+
+  h3 {
+    margin: 0 0 12px 0;
+    color: $primary;
+  }
+
+  .weather-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    input {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ee;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: none;
+      background: $primary;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .weather-body {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .weather-loading,
+  .weather-error,
+  .weather-empty {
+    color: $muted;
+    text-align: center;
+  }
+
+  .weather-info {
+    text-align: center;
+
+    .top {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .city {
+      font-size: 20px;
+      font-weight: 700;
+      color: $primary;
+    }
+
+    .temp {
+      font-size: 36px;
+      font-weight: 800;
+      margin-top: 6px;
+      color: $primary;
+    }
+
+    .desc {
+      text-transform: capitalize;
+      color: $muted;
+      margin-top: 6px;
+    }
+
+    .meta {
+      margin-top: 8px;
+      color: $muted;
+      font-size: 14px;
+    }
+  }
+
+  .retry {
+    margin-top: 8px;
+
+    .small {
+      background: transparent;
+      border: 1px solid #e6e9ee;
+      padding: 6px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}

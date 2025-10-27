@@ -1,0 +1,71 @@
+@import "./variables";
+
+.user-detail {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 16px;
+
+  a {
+    text-decoration: none;
+    color: $primary;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    margin: 0 0 8px 0;
+    color: $primary;
+  }
+
+  p {
+    margin: 4px 0;
+    color: $muted;
+  }
+
+  hr {
+    margin: 16px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    color: $primary;
+    font-size: 16px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      background: $card-bg;
+      border-radius: $radius;
+      box-shadow: $shadow;
+      padding: 12px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .todo-completed {
+    color: green;
+    text-decoration: line-through;
+  }
+}

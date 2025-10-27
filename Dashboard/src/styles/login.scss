@@ -1,0 +1,67 @@
+@import "./variables";
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  background: $card-bg;
+  width: 100%;
+  max-width: 420px;
+  border-radius: $radius;
+  padding: 28px;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .title {
+    margin: 0;
+    font-size: 20px;
+    color: $primary;
+    text-align: center;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: $muted;
+    gap: 8px;
+
+    input {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ee;
+      outline: none;
+      font-size: 14px;
+    }
+  }
+
+  .btn {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background: $primary;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .error {
+    color: $error;
+    font-size: 14px;
+  }
+
+  .hint {
+    color: $muted;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+  }
+}
