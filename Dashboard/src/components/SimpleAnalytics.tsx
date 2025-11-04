@@ -53,27 +53,14 @@ const SimpleAnalytics: React.FC = () => {
 
   
   useEffect(() => {
-    const onCustom = (e: Event) => {
-
-      const ce = e as CustomEvent;
-      if (ce?.detail && typeof ce.detail === "object") {
-        setOverrides(ce.detail as Record<number, boolean>);
-      } else {
-        setOverrides(readTodoOverrides());
-      }
-    };
-
     const onStorage = (e: StorageEvent) => {
       if (e.key === TODOS_KEY) {
         setOverrides(readTodoOverrides());
       }
     };
-
-    window.addEventListener("todos-updated", onCustom as EventListener);
     window.addEventListener("storage", onStorage);
 
     return () => {
-      window.removeEventListener("todos-updated", onCustom as EventListener);
       window.removeEventListener("storage", onStorage);
     };
   }, []);
