@@ -80,14 +80,6 @@ export const UserDetail: React.FC = () => {
   setTodosState((prev) => {
     const updated = { ...prev, [todoId]: !prev[todoId] };
     saveTodosState(updated);
-
-    try {
-      window.dispatchEvent(new CustomEvent("todos-updated", { detail: updated }));
-    } catch {
-   
-      window.dispatchEvent(new Event("todos-updated"));
-    }
-
     return updated;
   });
 };
