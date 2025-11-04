@@ -7,7 +7,7 @@ It was developed as the **final project for the React Course** provided by the *
 
 ## 🌐 Live Demo
 🚀 **View the project here:**  
-👉 [Dashboard](https://react-dashboard-ak65kuwao-ahme-hanys-projects.vercel.app/login)  
+👉 [Dashboard](react-dashboard-ak65kuwao-ahme-hanys-projects.vercel.app)  
 ---
 
 ## 🧩 Features
