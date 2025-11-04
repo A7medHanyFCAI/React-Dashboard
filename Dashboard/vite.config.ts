@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base:"/React-Dashboard/" ,
   plugins: [react()],
+  base:process.env.VITE_BASE_PATH || "/React-Dashboard"
 })
